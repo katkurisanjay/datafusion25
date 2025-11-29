@@ -46,6 +46,16 @@ const Hero = () => {
           Unleash the Prospects of Data Science
         </p>
 
+        {/* Prominent Register Button */}
+        <div className="mb-12 animate-slide-up">
+          <button
+            onClick={() => scrollToSection('register')}
+            className="px-12 py-6 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold text-2xl md:text-3xl hover:shadow-2xl transition-all glow-primary hover:scale-110 shadow-2xl inline-block"
+          >
+            🚀 REGISTER NOW
+          </button>
+        </div>
+
         {/* Date & Venue */}
         <div className="glass-effect rounded-2xl p-6 md:p-8 mb-8 max-w-3xl mx-auto animate-slide-up">
           <div className="space-y-3">
@@ -76,9 +86,9 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up mb-20">
           <button
             onClick={() => scrollToSection('register')}
-            className="px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all glow-primary hover:scale-105"
+            className="px-10 py-5 bg-primary text-white rounded-lg font-bold text-xl md:text-2xl hover:bg-primary/90 transition-all glow-primary hover:scale-110 shadow-2xl"
           >
-            Register Now
+            🚀 Register Now
           </button>
           <button
             onClick={() => scrollToSection('schedule')}

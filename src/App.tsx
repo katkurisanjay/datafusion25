@@ -9,6 +9,7 @@ import Register from './components/Register';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollButton from './components/ScrollButton';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollButton />
     </div>
   );
 }
