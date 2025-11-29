@@ -139,7 +139,7 @@ const Register = () => {
   };
 
   return (
-    <section id="register" className="py-20 px-4 bg-dark-card">
+    <section id="register" className="py-8 px-4 bg-dark-card">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary">
           Join Data Fusion 2025
