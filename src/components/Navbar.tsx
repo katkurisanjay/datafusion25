@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
@@ -55,6 +55,7 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: 'smooth',
       });
+      setIsMobileMenuOpen(false); // Close menu after clicking
     }
   };
 
@@ -89,7 +90,10 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden text-white">
+          <button className="md:hidden text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            title="Toggle mobile menu"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -105,6 +109,25 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 space-y-2">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className={`block w-full text-left px-4 py-2 rounded-lg transition-colors ${
+                  activeSection === link.id
+                    ? 'text-primary bg-primary/10'
+                    : 'text-text-secondary hover:text-primary hover:bg-dark-border/30'
+                }`}
+              >
+                {link.label}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );
