@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Register = () => {
-  const { ref, isVisible } = useScrollAnimation(0.2);
+  const { ref, isVisible } = useScrollAnimation<HTMLFormElement>(0.2);
   const [formData, setFormData] = useState({
     studentName: '',
     branch: '',
@@ -112,6 +112,7 @@ const Register = () => {
         },
         body: JSON.stringify(dataToSubmit),
       });
+      console.log(response)
 
       // Since we're using no-cors, we can't check the response
       // Assume success if no error is thrown
