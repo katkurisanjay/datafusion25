@@ -1,8 +1,11 @@
+import { Instagram } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="bg-dark-card border-t border-dark-border py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          
           {/* College Info */}
           <div>
             <h3 className="text-xl font-bold text-primary mb-4">
@@ -72,11 +75,12 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-text-muted hover:text-primary text-sm flex items-center space-x-2"
               >
-                <span>📷📷</span>
+                <Instagram size={18} />
                 <span>@datahub_vce</span>
               </a>
             </div>
           </div>
+
         </div>
 
         <div className="border-t border-dark-border pt-8 text-center">
@@ -93,4 +97,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
