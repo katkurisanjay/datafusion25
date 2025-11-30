@@ -21,6 +21,7 @@ const Coordinators = () => {
     student: [
       { name: 'U. Vishwanth', role: 'Student Coordinator' },
       { name: 'N. Vinja', role: 'Student Coordinator' },
+      { name: 'N. Vinja', role: 'Student Coordinator' },
     ],
   };
 
