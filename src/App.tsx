@@ -10,10 +10,12 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollButton from './components/ScrollButton';
+import SEO from './components/SEO';
 
 function App() {
   return (
     <div className="min-h-screen">
+      <SEO />
       <Navbar />
       <main>
         <Hero />
