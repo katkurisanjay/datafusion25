@@ -1,8 +1,10 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 const Coordinators = () => {
   const { ref, isVisible } = useScrollAnimation(0.2);
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const [marqueeWidth, setMarqueeWidth] = useState(0);
 
   const coordinators = {
     patron: [{ name: 'Dr. K. Prakash', role: 'Principal, VCE' }],
@@ -30,26 +32,10 @@ const Coordinators = () => {
     { name: 'Charan', phone: '9381187033' },
   ];
 
-  // ----------------------------------
-  // 🚀 FIX: Auto width + smooth scroll
-  // ----------------------------------
-  const trackRef = useRef(null);
-  const containerRef = useRef(null);
-
   useEffect(() => {
-    const track = trackRef.current;
-    const container = containerRef.current;
-    if (!track || !container) return;
-
-    const inner = track.querySelector(".marquee-inner");
-    const innerWidth = inner.scrollWidth;
-
-    // Set track width = 2 × inner content width
-    track.style.width = innerWidth * 2 + "px";
-
-    // Duplicate the content automatically
-    track.innerHTML = inner.outerHTML + inner.outerHTML;
-
+    if (marqueeRef.current) {
+      setMarqueeWidth(marqueeRef.current.scrollWidth);
+    }
   }, []);
 
   return (
@@ -62,73 +48,73 @@ const Coordinators = () => {
           Coordinators & Team
         </h2>
 
+        {/* Marquee */}
         <div
           ref={ref}
           className={`mb-16 transition-all duration-700 rounded-2xl border-2 border-dark-border p-4 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-
-          {/* ---------------------------------- */}
-          {/* 🚀 PERFECT SMOOTH MARQUEE */}
-          {/* ---------------------------------- */}
-          <div
-            ref={containerRef}
-            className="overflow-hidden relative w-full"
-          >
+          <div className="overflow-hidden relative">
             <div
-              ref={trackRef}
-              className="flex animate-[scroll_38s_linear_infinite]"
+              ref={marqueeRef}
+              className="flex gap-6 absolute whitespace-nowrap will-change-transform"
+              style={{
+                animation: `marquee ${marqueeWidth / 50}s linear infinite`,
+              }}
             >
+              {/* ORIGINAL + DUPLICATE FOR SMOOTH SCROLL */}
+              {[...Array(2)].map((_, dupIndex) => (
+                <div key={dupIndex} className="flex gap-6">
+                  {/* Patron */}
+                  <div className="glass-effect rounded-xl p-6 glow-primary flex-shrink-0 w-64">
+                    <h3 className="text-xl font-bold text-primary mb-4">Patron</h3>
+                    {coordinators.patron.map((person, index) => (
+                      <div key={`patron-${dupIndex}-${index}`} className="mb-3">
+                        <p className="text-text-primary font-semibold">{person.name}</p>
+                        <p className="text-text-muted text-sm">{person.role}</p>
+                      </div>
+                    ))}
+                  </div>
 
-              {/* Inner content (auto-duplicated via JS) */}
-              <div className="marquee-inner flex gap-6">
+                  {/* Convenor */}
+                  <div className="glass-effect rounded-xl p-6 glow-accent flex-shrink-0 w-64">
+                    <h3 className="text-xl font-bold text-accent mb-4">Convenor</h3>
+                    {coordinators.convenor.map((person, index) => (
+                      <div key={`convenor-${dupIndex}-${index}`} className="mb-3">
+                        <p className="text-text-primary font-semibold">{person.name}</p>
+                        <p className="text-text-muted text-sm">{person.role}</p>
+                      </div>
+                    ))}
+                  </div>
 
-                {/* Patron */}
-                <div className="glass-effect rounded-xl p-6 glow-primary flex-shrink-0 w-64">
-                  <h3 className="text-xl font-bold text-primary mb-4">Patron</h3>
-                  {coordinators.patron.map((person, index) => (
-                    <div key={`patron-${index}`} className="mb-3">
-                      <p className="text-text-primary font-semibold">{person.name}</p>
-                      <p className="text-text-muted text-sm">{person.role}</p>
-                    </div>
-                  ))}
+                  {/* Faculty */}
+                  <div className="glass-effect rounded-xl p-6 glow-secondary flex-shrink-0 w-64">
+                    <h3 className="text-xl font-bold text-secondary mb-4">
+                      Faculty Coordinators
+                    </h3>
+                    {coordinators.faculty.map((person, index) => (
+                      <div key={`faculty-${dupIndex}-${index}`} className="mb-3">
+                        <p className="text-text-primary font-semibold">{person.name}</p>
+                        <p className="text-text-muted text-sm">{person.role}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Club */}
+                  <div className="glass-effect rounded-xl p-6 glow-purple flex-shrink-0 w-64">
+                    <h3 className="text-xl font-bold text-accent-purple mb-4">
+                      Club Coordinators
+                    </h3>
+                    {coordinators.club.map((person, index) => (
+                      <div key={`club-${dupIndex}-${index}`} className="mb-3">
+                        <p className="text-text-primary font-semibold">{person.name}</p>
+                        <p className="text-text-muted text-sm">{person.role}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-
-                {/* Convenor */}
-                <div className="glass-effect rounded-xl p-6 glow-accent flex-shrink-0 w-64">
-                  <h3 className="text-xl font-bold text-accent mb-4">Convenor</h3>
-                  {coordinators.convenor.map((person, index) => (
-                    <div key={`convenor-${index}`} className="mb-3">
-                      <p className="text-text-primary font-semibold">{person.name}</p>
-                      <p className="text-text-muted text-sm">{person.role}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Faculty */}
-                <div className="glass-effect rounded-xl p-6 glow-secondary flex-shrink-0 w-64">
-                  <h3 className="text-xl font-bold text-secondary mb-4">Faculty Coordinators</h3>
-                  {coordinators.faculty.map((person, index) => (
-                    <div key={`faculty-${index}`} className="mb-3">
-                      <p className="text-text-primary font-semibold">{person.name}</p>
-                      <p className="text-text-muted text-sm">{person.role}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Club */}
-                <div className="glass-effect rounded-xl p-6 glow-purple flex-shrink-0 w-64">
-                  <h3 className="text-xl font-bold text-accent-purple mb-4">Club Coordinators</h3>
-                  {coordinators.club.map((person, index) => (
-                    <div key={`club-${index}`} className="mb-3">
-                      <p className="text-text-primary font-semibold">{person.name}</p>
-                      <p className="text-text-muted text-sm">{person.role}</p>
-                    </div>
-                  ))}
-                </div>
-
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -138,7 +124,6 @@ const Coordinators = () => {
           <h3 className="text-3xl font-bold text-center mb-8 text-primary">
             Student Coordinators
           </h3>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {coordinators.student.map((person, index) => (
               <div
@@ -155,10 +140,7 @@ const Coordinators = () => {
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-
-                  <h4 className="text-xl font-bold text-primary mb-2">
-                    {person.name}
-                  </h4>
+                  <h4 className="text-xl font-bold text-primary mb-2">{person.name}</h4>
                   <p className="text-text-muted text-sm mb-3">{person.role}</p>
                   <p className="text-text-secondary text-sm">
                     CSE - Data Science, Vaagdevi College of Engineering
@@ -169,21 +151,18 @@ const Coordinators = () => {
           </div>
         </div>
 
-        {/* Contact Section */}
+        {/* Contact Queries */}
         <div>
           <h3 className="text-3xl font-bold text-center mb-8 text-primary">
             Contact for Queries
           </h3>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {contactQueries.map((contact, index) => (
               <div
                 key={index}
                 className="glass-effect rounded-lg p-4 hover:scale-105 transition-all"
               >
-                <p className="text-text-primary font-semibold mb-2">
-                  {contact.name}
-                </p>
+                <p className="text-text-primary font-semibold mb-2">{contact.name}</p>
                 <a
                   href={`tel:+91${contact.phone}`}
                   className="text-accent hover:text-primary transition-colors"
@@ -194,8 +173,17 @@ const Coordinators = () => {
             ))}
           </div>
         </div>
-
       </div>
+
+      {/* MARQUEE KEYFRAMES */}
+      <style>
+        {`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}
+      </style>
     </section>
   );
 };
