@@ -53,5 +53,38 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Marquee / Continuous horizontal scroll utilities */
+  .marquee {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .marquee__track {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    will-change: transform;
+    animation: marquee-left 20s linear infinite;
+  }
+
+  .marquee__track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Utility to duplicate content spacing when duplicating track */
+  .marquee__inner {
+    display: inline-flex;
+    gap: 1.5rem;
+  }
 }
 
