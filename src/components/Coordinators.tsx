@@ -4,17 +4,49 @@ const Coordinators = () => {
   const { ref, isVisible } = useScrollAnimation(0.2);
 
   const coordinators = {
-    patron: [{ name: 'Dr. K. Prakash', role: 'Principal, VCE' }],
-    convenor: [{ name: 'Dr. Ayesha Banu', role: 'HOD, CSE-DS' }],
+    patron: [
+      { 
+        name: 'Dr. K. Prakash', 
+        role: 'Principal, VCE',
+        img: '/images/patron.jpg' // ← Replace later
+      }
+    ],
+
+    convenor: [
+      { 
+        name: 'Dr. Ayesha Banu', 
+        role: 'HOD, CSE-DS',
+        img: '/images/convenor.jpg' // ← Replace later
+      }
+    ],
+
     faculty: [
-      { name: 'Mrs. Zareena Begum', role: 'Assistant Professor, VCE' },
+      { 
+        name: 'Mrs. Zareena Begum', 
+        role: 'Assistant Professor, VCE',
+        img: '/images/faculty1.jpg' // ← Replace later
+      }
     ],
+
     club: [
-      { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
+      { 
+        name: 'Mrs. G. Pallavi', 
+        role: 'Assistant Professor',
+        img: '/images/club1.jpg' // ← Replace later
+      }
     ],
+
     student: [
-      { name: 'Mohammad Siraj', role: 'Chair' },
-      { name: 'Aishwarya', role: 'Vice Chair' },
+      { 
+        name: 'Mohammad Siraj', 
+        role: 'Chair',
+        img: '/images/student1.jpg' // ← Replace later
+      },
+      { 
+        name: 'Aishwarya', 
+        role: 'Vice Chair',
+        img: '/images/student2.jpg' // ← Replace later
+      }
     ],
   };
 
@@ -33,67 +65,71 @@ const Coordinators = () => {
       className="py-20 px-4 bg-gradient-to-b from-dark-bg to-dark-card"
     >
       <div className="container mx-auto">
+        
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
           Coordinators & Team
         </h2>
 
-        {/* SIMPLE STANDARD GRID (Marquee removed) */}
+        {/* ---- TOP COORDINATORS WITH IMAGE CARDS ---- */}
         <div
           ref={ref}
-          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 transition-all duration-700 ${
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 transition-all duration-700 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
+
           {/* Patron */}
-          <div className="glass-effect rounded-xl p-6 glow-primary">
-            <h3 className="text-xl font-bold text-primary mb-4">Patron</h3>
-            {coordinators.patron.map((person, index) => (
-              <div key={index} className="mb-3">
-                <p className="text-text-primary font-semibold">{person.name}</p>
-                <p className="text-text-muted text-sm">{person.role}</p>
+          {coordinators.patron.map((person, index) => (
+            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary/40">
+                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-primary mb-2">Patron</h3>
+              <p className="text-text-primary font-semibold">{person.name}</p>
+              <p className="text-text-muted text-sm">{person.role}</p>
+            </div>
+          ))}
 
           {/* Convenor */}
-          <div className="glass-effect rounded-xl p-6 glow-accent">
-            <h3 className="text-xl font-bold text-accent mb-4">Convenor</h3>
-            {coordinators.convenor.map((person, index) => (
-              <div key={index} className="mb-3">
-                <p className="text-text-primary font-semibold">{person.name}</p>
-                <p className="text-text-muted text-sm">{person.role}</p>
+          {coordinators.convenor.map((person, index) => (
+            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-accent/40">
+                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-accent mb-2">Convenor</h3>
+              <p className="text-text-primary font-semibold">{person.name}</p>
+              <p className="text-text-muted text-sm">{person.role}</p>
+            </div>
+          ))}
 
           {/* Faculty */}
-          <div className="glass-effect rounded-xl p-6 glow-secondary">
-            <h3 className="text-xl font-bold text-secondary mb-4">
-              Faculty Coordinators
-            </h3>
-            {coordinators.faculty.map((person, index) => (
-              <div key={index} className="mb-3">
-                <p className="text-text-primary font-semibold">{person.name}</p>
-                <p className="text-text-muted text-sm">{person.role}</p>
+          {coordinators.faculty.map((person, index) => (
+            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-secondary/40">
+                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-secondary mb-2">Faculty Coordinator</h3>
+              <p className="text-text-primary font-semibold">{person.name}</p>
+              <p className="text-text-muted text-sm">{person.role}</p>
+            </div>
+          ))}
 
           {/* Club */}
-          <div className="glass-effect rounded-xl p-6 glow-purple">
-            <h3 className="text-xl font-bold text-accent-purple mb-4">
-              Club Coordinators
-            </h3>
-            {coordinators.club.map((person, index) => (
-              <div key={index} className="mb-3">
-                <p className="text-text-primary font-semibold">{person.name}</p>
-                <p className="text-text-muted text-sm">{person.role}</p>
+          {coordinators.club.map((person, index) => (
+            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-purple-400/40">
+                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-purple-400 mb-2">Club Coordinator</h3>
+              <p className="text-text-primary font-semibold">{person.name}</p>
+              <p className="text-text-muted text-sm">{person.role}</p>
+            </div>
+          ))}
+
         </div>
 
-        {/* Student Coordinators */}
+
+        {/* ---- STUDENT COORDINATORS ---- */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-8 text-primary">
             Student Coordinators
@@ -106,13 +142,11 @@ const Coordinators = () => {
                 className="glass-effect rounded-2xl p-6 glow-accent hover:scale-105 transition-all"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 mb-4 flex items-center justify-center border-2 border-accent/30">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-accent/40">
                     <img
-                      src={`https://via.placeholder.com/128x128/00D9FF/FFFFFF?text=${
-                        person.name.split(' ')[0][0]
-                      }`}
+                      src={person.img}
                       alt={person.name}
-                      className="w-full h-full rounded-full object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
@@ -129,7 +163,8 @@ const Coordinators = () => {
           </div>
         </div>
 
-        {/* Contact Queries */}
+
+        {/* ---- CONTACT QUERIES ---- */}
         <div>
           <h3 className="text-3xl font-bold text-center mb-8 text-primary">
             Contact for Queries
