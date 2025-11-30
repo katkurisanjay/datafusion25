@@ -42,7 +42,7 @@ const CircularTimer = () => {
   };
 
   const timeUnits = [
-    { value: timeLeft.days, max: 365, label: 'Days', color: 'primary' },
+    { value: timeLeft.days, max: 31, label: 'Days', color: 'primary' },
     { value: timeLeft.hours, max: 24, label: 'Hours', color: 'accent' },
     { value: timeLeft.minutes, max: 60, label: 'Minutes', color: 'primary' },
     { value: timeLeft.seconds, max: 60, label: 'Seconds', color: 'accent' },
