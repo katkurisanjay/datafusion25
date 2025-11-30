@@ -8,10 +8,8 @@ const Coordinators = () => {
     convenor: [{ name: 'Dr. Ayesha Banu', role: 'HOD, CSE-DS' }],
     faculty: [
       { name: 'Mrs. Zareena Begum', role: 'Assistant Professor, VCE' },
-      { name: 'Mr. Mohammad Sohail', role: 'Assistant Professor, VCE' },
     ],
     club: [
-      { name: 'Mrs. Zareena Begum', role: 'Assistant Professor' },
       { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
     ],
     student: [
@@ -88,7 +86,7 @@ const Coordinators = () => {
                 </div>
 
                 {/* Club */}
-                {/* <div className="glass-effect rounded-xl p-6 glow-purple flex-shrink-0 w-64">
+                 <div className="glass-effect rounded-xl p-6 glow-purple flex-shrink-0 w-64">
                   <h3 className="text-xl font-bold text-accent-purple mb-4">Club Coordinators</h3>
                   {coordinators.club.map((person, index) => (
                     <div key={`club-${index}`} className="mb-3">
@@ -97,7 +95,7 @@ const Coordinators = () => {
                     </div>
                   ))}
                 </div>
-              </div> */}
+              </div> 
 
               {/* DUPLICATE ITEMS */}
               <div className="marquee__inner flex gap-6" aria-hidden="true">
