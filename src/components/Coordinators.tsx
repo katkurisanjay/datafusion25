@@ -45,13 +45,15 @@ const Coordinators = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          {/* Marquee container */}
+
+          {/* Marquee */}
           <div className="marquee">
-            <div className="marquee__track animate-marquee">
-              
+            {/* FIX APPLIED HERE → removed animate-marquee */}
+            <div className="marquee__track">
+
               {/* ORIGINAL ITEMS */}
               <div className="marquee__inner flex gap-6">
-                
+
                 {/* Patron */}
                 <div className="glass-effect rounded-xl p-6 glow-primary flex-shrink-0 w-64">
                   <h3 className="text-xl font-bold text-primary mb-4">Patron</h3>
