@@ -11,13 +11,13 @@ const Coordinators = () => {
       { name: 'Dr. Ayesha Banu', role: 'HOD, CSE-DS' },
     ],
     faculty: [
-      { name: 'Mrs. Zareena Begum', role: 'Assistant Professor' },
-      { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
+      { name: 'Mrs. Zareena Begum', role: 'Assistant Professor, VCE' },
+      { name: 'Mr. Mohammad Sohail', role: 'Assistant Professor, VCE' },
     ],
-    club: [
-      { name: 'Mrs. Zareena Begum', role: 'Assistant Professor' },
-      { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
-    ],
+    // club: [
+    //   { name: 'Mrs. Zareena Begum', role: 'Assistant Professor' },
+    //   { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
+    // ],
     student: [
       { name: 'Mohammad Siraj', role: 'Chair , 4-CSE(DS)' },
       { name: 'Aishwarya', role: 'Vice Chair, 4-CSE(DS)' },
@@ -47,9 +47,9 @@ const Coordinators = () => {
           }`}
         >
           {/* Marquee container: duplicates the cards for a continuous scroll */}
-          <div className="marquee">
+          {/* <div className="marquee">
             <div className="marquee__track">
-              <div className="marquee__inner">
+              <div className="marquee__inner"> */}
                 {/* Patron */}
                 <div className="glass-effect rounded-xl p-6 glow-primary flex-shrink-0 w-64">
                   <h3 className="text-xl font-bold text-primary mb-4">Patron</h3>
@@ -96,7 +96,7 @@ const Coordinators = () => {
               </div>
 
               {/* Duplicate - visually identical, aria-hidden to prevent screen reader duplication */}
-              <div className="marquee__inner" aria-hidden="true">
+              {/* <div className="marquee__inner" aria-hidden="true"> */}
                 {/* Patron duplicate */}
                 <div className="glass-effect rounded-xl p-6 glow-primary flex-shrink-0 w-64">
                   <h3 className="text-xl font-bold text-primary mb-4">Patron</h3>
