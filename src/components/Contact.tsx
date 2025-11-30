@@ -1,3 +1,5 @@
+import { Instagram } from "lucide-react";
+
 const Contact = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-dark-card">
@@ -28,6 +30,7 @@ const Contact = () => {
                 <span>📧</span>
                 <span>info@vaagdevi.edu.in</span>
               </a>
+
               <a
                 href="tel:+918886536969"
                 className="flex items-center justify-center space-x-2 text-accent hover:text-primary transition-colors"
@@ -39,13 +42,14 @@ const Contact = () => {
 
             <div className="pt-6 border-t border-dark-border">
               <p className="text-text-muted mb-4">Follow us on social media</p>
+
               <a
                 href="https://instagram.com/datahub_vce"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-accent hover:text-primary transition-colors"
               >
-                <span>📷</span>
+                <Instagram size={20} />
                 <span>@datahub_vce</span>
               </a>
             </div>
@@ -57,4 +61,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
