@@ -152,7 +152,7 @@ const Register = () => {
         <div className="glass-effect rounded-2xl p-8 mb-8 text-center glow-accent">
           <p className="text-text-secondary mb-2">Early Bird Pass</p>
           <div className="flex items-center justify-center gap-4 mb-4">
-            <span className="text-5xl font-bold text-primary">₹399/-</span>
+            <span className="text-5xl font-bold text-primary">₹450/-</span>
             <span className="text-2xl text-text-muted line-through">₹500</span>
           </div>
           <p className="text-sm text-text-muted">
