@@ -10,10 +10,10 @@ const Coordinators = () => {
       { name: 'Mrs. Zareena Begum', role: 'Assistant Professor, VCE' },
       { name: 'Mr. Mohammad Sohail', role: 'Assistant Professor, VCE' },
     ],
-    club: [
-      { name: 'Mrs. Zareena Begum', role: 'Assistant Professor' },
-      { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
-    ],
+    // club: [
+    //   { name: 'Mrs. Zareena Begum', role: 'Assistant Professor' },
+    //   { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
+    // ],
     student: [
       { name: 'Mohammad Siraj', role: 'Chair' },
       { name: 'Aishwarya', role: 'Vice Chair' },
