@@ -19,9 +19,8 @@ const Coordinators = () => {
       { name: 'Mrs. G. Pallavi', role: 'Assistant Professor' },
     ],
     student: [
-      { name: 'U. Vishwanth', role: 'Student Coordinator' },
-      { name: 'N. Vinja', role: 'Student Coordinator' },
-      { name: 'N. Vinja', role: 'Student Coordinator' },
+      { name: 'Mohammad Siraj', role: 'Chair , 4-CSE(DS)' },
+      { name: 'Aishwarya', role: 'Vice Chair, 4-CSE(DS)' },
     ],
   };
 
