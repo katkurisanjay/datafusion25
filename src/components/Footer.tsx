@@ -72,7 +72,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-text-muted hover:text-primary text-sm flex items-center space-x-2"
               >
-                <span>📷</span>
+                <span>📷📷</span>
                 <span>@datahub_vce</span>
               </a>
             </div>
