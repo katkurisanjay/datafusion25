@@ -20,7 +20,7 @@ const Coordinators = () => {
       }
     ],
     
-    club: [
+    faculty: [
       { 
         name: 'Mohammad Sohail', 
         role: 'Assistant Professor',
