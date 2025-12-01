@@ -47,14 +47,20 @@ const Coordinators = () => {
     ],
   };
 
+  const contactQueries = [
+    { name: 'Jaleel', phone: '9347277723' },
+    { name: 'Siddharth', phone: '9133776565' },
+    { name: 'Sarika', phone: '9908997987' },
+    { name: 'Pardhiv', phone: '8309019959' },
+    { name: 'Saathwik', phone: '7672036882' },
+    { name: 'Charan', phone: '9381187033' },
+  ];
+
   const hoverClasses =
     "transition-all duration-300 hover:scale-105 hover:shadow-xl";
 
   return (
-    <section
-      id="coordinators"
-      className="py-20 px-4 bg-gradient-to-b from-dark-bg to-dark-card"
-    >
+    <section id="coordinators" className="py-20 px-4 bg-gradient-to-b from-dark-bg to-dark-card">
       <div className="container mx-auto">
 
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
@@ -71,10 +77,7 @@ const Coordinators = () => {
 
           {/* Patron */}
           {coordinators.patron.map((person, index) => (
-            <div
-              key={index}
-              className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}
-            >
+            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary/40">
                 <img src={person.img} className="w-full h-full object-cover" />
               </div>
@@ -86,10 +89,7 @@ const Coordinators = () => {
 
           {/* Convenor */}
           {coordinators.convenor.map((person, index) => (
-            <div
-              key={index}
-              className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}
-            >
+            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-accent/40">
                 <img src={person.img} className="w-full h-full object-cover" />
               </div>
@@ -99,12 +99,9 @@ const Coordinators = () => {
             </div>
           ))}
 
-          {/* Faculty Coordinators */}
+          {/* Faculty */}
           {coordinators.faculty.map((person, index) => (
-            <div
-              key={index}
-              className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}
-            >
+            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-secondary/40">
                 <img src={person.img} className="w-full h-full object-cover" />
               </div>
@@ -113,20 +110,14 @@ const Coordinators = () => {
               <p className="text-text-muted text-sm">{person.role}</p>
             </div>
           ))}
-
         </div>
 
         {/* ---- STUDENT COORDINATORS ---- */}
-        <h3 className="text-3xl font-bold text-center text-primary mb-8">
-          Student Coordinators
-        </h3>
+        <h3 className="text-3xl font-bold text-center text-primary mb-8">Student Coordinators</h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {coordinators.student.map((person, index) => (
-            <div
-              key={index}
-              className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}
-            >
+            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
               <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border-2 border-blue-400/40">
                 <img src={person.img} className="w-full h-full object-cover" />
               </div>
@@ -135,12 +126,6 @@ const Coordinators = () => {
             </div>
           ))}
         </div>
-
-      </div>
-    </section>
-  );
-};
-
 
         {/* ---- CONTACT QUERIES ---- */}
         <div>
