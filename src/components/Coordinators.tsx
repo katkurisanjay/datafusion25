@@ -15,22 +15,22 @@ const Coordinators = () => {
     convenor: [
       { 
         name: 'Dr. Ayesha Banu', 
-        role: 'HOD, CSE-DS, VCE',
+        role: 'HOD, CSE-DS',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
       }
     ],
 
     faculty: [
       { 
-        name: 'Mrs. Zareena Begum', 
-        role: 'Assistant Professor, VCE',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg'
-      },
-      { 
         name: 'Mohammad Sohail', 
         role: 'Assistant Professor, VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764602523/sohail_jc0qr1.jpg'
       },
+      { 
+        name: 'Mrs. Zareena Begum', 
+        role: 'Assistant Professor, VCE',
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg'
+      }
     ],
 
     student: [
@@ -74,7 +74,10 @@ const Coordinators = () => {
 
           {/* Patron */}
           {coordinators.patron.map((person, index) => (
-            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
+            <div 
+              key={index} 
+              className="glass-effect rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 transition-all"
+            >
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary/40">
                 <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
@@ -86,7 +89,10 @@ const Coordinators = () => {
 
           {/* Convenor */}
           {coordinators.convenor.map((person, index) => (
-            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
+            <div 
+              key={index} 
+              className="glass-effect rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl hover:shadow-accent/40 transition-all"
+            >
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-accent/40">
                 <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
@@ -98,7 +104,10 @@ const Coordinators = () => {
 
           {/* Faculty Coordinators */}
           {coordinators.faculty.map((person, index) => (
-            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
+            <div 
+              key={index} 
+              className="glass-effect rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl hover:shadow-secondary/40 transition-all"
+            >
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-secondary/40">
                 <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
@@ -109,14 +118,16 @@ const Coordinators = () => {
           ))}
         </div>
 
-
         {/* ---- STUDENT COORDINATORS ---- */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-8 text-primary">Student Coordinators</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {coordinators.student.map((person, index) => (
-              <div key={index} className="glass-effect rounded-2xl p-6 glow-accent hover:scale-105 transition-all">
+              <div 
+                key={index} 
+                className="glass-effect rounded-2xl p-6 glow-accent hover:scale-105 hover:shadow-2xl hover:shadow-accent/40 transition-all"
+              >
                 <div className="flex flex-col items-center text-center">
                   <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-accent/40">
                     <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
@@ -133,14 +144,13 @@ const Coordinators = () => {
           </div>
         </div>
 
-
         {/* ---- CONTACT QUERIES ---- */}
         <div>
           <h3 className="text-3xl font-bold text-center mb-8 text-primary">Contact for Queries</h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {contactQueries.map((contact, index) => (
-              <div key={index} className="glass-effect rounded-lg p-4 hover:scale-105 transition-all">
+              <div key={index} className="glass-effect rounded-lg p-4 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all">
                 <p className="text-text-primary font-semibold mb-2">{contact.name}</p>
                 <a href={`tel:+91${contact.phone}`} className="text-accent hover:text-primary transition-colors">
                   {contact.phone}
@@ -156,5 +166,3 @@ const Coordinators = () => {
 };
 
 export default Coordinators;
-
-again im getting error
