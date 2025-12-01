@@ -5,15 +5,11 @@ const Coordinators = () => {
 
   const coordinators = {
     patron: [
-      { 
-        name: 'Dr. K. Prakash', 
-        role: 'Principal, VCE',
-        <img
-                      src="https://res.cloudinary.com/dika0ttaj/image/upload/v1764584378/Dr.K.Prakash_d9lo0d.jpg"
-                      alt="patron"
-                      className="w-full h-full object-contain"
-                    />
-      }
+    { 
+      name: 'Dr. K. Prakash', 
+      role: 'Principal, VCE',
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584378/Dr.K.Prakash_d9lo0d.jpg'
+    }
     ],
 
     convenor: [
