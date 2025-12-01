@@ -32,7 +32,7 @@ const Coordinators = () => {
       { 
         name: 'Mohammad Sohail', 
         role: 'Assistant Professor, VCE',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/sohail_jc0qr1.jpg' // ← Replace later
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764602523/sohail_jc0qr1.jpg' // ← Replace later
       }
     ],
     
