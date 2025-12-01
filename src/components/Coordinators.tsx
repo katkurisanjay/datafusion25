@@ -25,7 +25,7 @@ const Coordinators = () => {
         name: 'Mrs. Zareena Begum', 
         role: 'Assistant Professor, VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg'
-      }
+      },
       { 
         name: 'Mohammad Sohail', 
         role: 'Assistant Professor, VCE',
