@@ -5,52 +5,44 @@ const Coordinators = () => {
 
   const coordinators = {
     patron: [
-    { 
-      name: 'Dr. K. Prakash', 
-      role: 'Principal, VCE',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764603809/Dr.K.Prakash_d9lo0d.jpg'
-    }
+      { 
+        name: 'Dr. K. Prakash', 
+        role: 'Principal, VCE',
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764603809/Dr.K.Prakash_d9lo0d.jpg'
+      }
     ],
 
     convenor: [
       { 
         name: 'Dr. Ayesha Banu', 
         role: 'HOD, CSE-DS',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg' // ← Replace later
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
       }
     ],
 
-    club: [
-      { 
-        name: 'Mrs. Zareena Begum', 
-        role: 'Assistant Professor',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg' // ← Replace later
-      }
-    ],
-    
-  faculty: [
+    faculty: [
       { 
         name: 'Mohammad Sohail', 
         role: 'Assistant Professor, VCE',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764602523/sohail_jc0qr1.jpg' // ← Replace later
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764602523/sohail_jc0qr1.jpg'
+      },
+      { 
+        name: 'Mrs. Zareena Begum', 
+        role: 'Assistant Professor, VCE',
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg'
       }
     ],
-    
-
-    
-
-   
 
     student: [
       { 
         name: 'Mohammad Siraj', 
         role: 'Chair',
-        img: '/images/student1.jpg' // ← Replace later
+        img: '/images/student1.jpg'
       },
       { 
         name: 'Aishwarya', 
         role: 'Vice Chair',
-        img: '/images/student2.jpg' // ← Replace later
+        img: '/images/student2.jpg'
       }
     ],
   };
@@ -75,7 +67,6 @@ const Coordinators = () => {
           Coordinators & Team
         </h2>
 
-        {/* ---- TOP COORDINATORS WITH IMAGE CARDS ---- */}
         <div
           ref={ref}
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 transition-all duration-700 ${
@@ -107,7 +98,7 @@ const Coordinators = () => {
             </div>
           ))}
 
-          {/* Faculty */}
+          {/* Faculty Coordinators */}
           {coordinators.faculty.map((person, index) => (
             <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-secondary/40">
@@ -119,19 +110,12 @@ const Coordinators = () => {
             </div>
           ))}
 
-          {/* Club */}
-          {coordinators.club.map((person, index) => (
-            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-purple-400/40">
-                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
-              </div>
-              <h3 className="text-xl font-bold text-purple-400 mb-2">Club Coordinator</h3>
-              <p className="text-text-primary font-semibold">{person.name}</p>
-              <p className="text-text-muted text-sm">{person.role}</p>
-            </div>
-          ))}
-
         </div>
+
+      </div>
+    </section>
+  );
+};
 
 
         {/* ---- STUDENT COORDINATORS ---- */}
