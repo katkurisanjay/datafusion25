@@ -8,7 +8,7 @@ const Coordinators = () => {
       { 
         name: 'Dr. K. Prakash', 
         role: 'Principal, VCE',
-        img: 'src/Dr.K.Prakash.jpeg' // ← Replace later
+        img: '' // ← Replace later
       }
     ],
 
