@@ -20,18 +20,18 @@ const Coordinators = () => {
       }
     ],
     
-    faculty: [
+    club: [
       { 
-        name: 'Mohammad Sohail', 
+        name: 'Mrs. Zareena Begum', 
         role: 'Assistant Professor',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/sohail_jc0qr1.jpg' // ← Replace later
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg' // ← Replace later
       }
     ],
      faculty: [
       { 
-        name: 'Mrs. Zareena Begum', 
+        name: 'Mohammad Sohail', 
         role: 'Assistant Professor, VCE',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg' // ← Replace later
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/sohail_jc0qr1.jpg' // ← Replace later
       }
     ],
 
