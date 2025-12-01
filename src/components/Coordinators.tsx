@@ -15,22 +15,22 @@ const Coordinators = () => {
     convenor: [
       { 
         name: 'Dr. Ayesha Banu', 
-        role: 'HOD, CSE-DS',
+        role: 'HOD, CSE-DS, VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
       }
     ],
 
     faculty: [
       { 
-        name: 'Mohammad Sohail', 
-        role: 'Assistant Professor, VCE',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764602523/sohail_jc0qr1.jpg'
-      },
-      { 
         name: 'Mrs. Zareena Begum', 
         role: 'Assistant Professor, VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg'
       }
+      { 
+        name: 'Mohammad Sohail', 
+        role: 'Assistant Professor, VCE',
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764602523/sohail_jc0qr1.jpg'
+      },
     ],
 
     student: [
