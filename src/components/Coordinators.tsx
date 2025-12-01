@@ -15,7 +15,7 @@ const Coordinators = () => {
     convenor: [
       { 
         name: 'Dr. Ayesha Banu', 
-        role: 'HOD, CSE-DS',
+        role: 'HOD, CSE-DS, VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
       }
     ],
@@ -30,7 +30,7 @@ const Coordinators = () => {
         name: 'Mohammad Sohail', 
         role: 'Assistant Professor, VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764602523/sohail_jc0qr1.jpg'
-      }
+      },
     ],
 
     student: [
@@ -56,9 +56,6 @@ const Coordinators = () => {
     { name: 'Charan', phone: '9381187033' },
   ];
 
-  const hoverClasses =
-    "transition-all duration-300 hover:scale-105 hover:shadow-xl";
-
   return (
     <section id="coordinators" className="py-20 px-4 bg-gradient-to-b from-dark-bg to-dark-card">
       <div className="container mx-auto">
@@ -77,9 +74,9 @@ const Coordinators = () => {
 
           {/* Patron */}
           {coordinators.patron.map((person, index) => (
-            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
+            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary/40">
-                <img src={person.img} className="w-full h-full object-cover" />
+                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Patron</h3>
               <p className="text-text-primary font-semibold">{person.name}</p>
@@ -89,9 +86,9 @@ const Coordinators = () => {
 
           {/* Convenor */}
           {coordinators.convenor.map((person, index) => (
-            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
+            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-accent/40">
-                <img src={person.img} className="w-full h-full object-cover" />
+                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-accent mb-2">Convenor</h3>
               <p className="text-text-primary font-semibold">{person.name}</p>
@@ -99,11 +96,11 @@ const Coordinators = () => {
             </div>
           ))}
 
-          {/* Faculty */}
+          {/* Faculty Coordinators */}
           {coordinators.faculty.map((person, index) => (
-            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
+            <div key={index} className="glass-effect rounded-2xl p-6 text-center hover:scale-105 transition-all">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-secondary/40">
-                <img src={person.img} className="w-full h-full object-cover" />
+                <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-xl font-bold text-secondary mb-2">Faculty Coordinator</h3>
               <p className="text-text-primary font-semibold">{person.name}</p>
@@ -112,20 +109,30 @@ const Coordinators = () => {
           ))}
         </div>
 
-        {/* ---- STUDENT COORDINATORS ---- */}
-        <h3 className="text-3xl font-bold text-center text-primary mb-8">Student Coordinators</h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          {coordinators.student.map((person, index) => (
-            <div key={index} className={`glass-effect rounded-2xl p-6 text-center ${hoverClasses}`}>
-              <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border-2 border-blue-400/40">
-                <img src={person.img} className="w-full h-full object-cover" />
+        {/* ---- STUDENT COORDINATORS ---- */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-primary">Student Coordinators</h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {coordinators.student.map((person, index) => (
+              <div key={index} className="glass-effect rounded-2xl p-6 glow-accent hover:scale-105 transition-all">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-accent/40">
+                    <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
+                  </div>
+
+                  <h4 className="text-xl font-bold text-primary mb-2">{person.name}</h4>
+                  <p className="text-text-muted text-sm mb-3">{person.role}</p>
+                  <p className="text-text-secondary text-sm">
+                    CSE - Data Science, Vaagdevi College of Engineering
+                  </p>
+                </div>
               </div>
-              <p className="text-xl font-bold text-text-primary">{person.name}</p>
-              <p className="text-sm text-text-muted">{person.role}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+
 
         {/* ---- CONTACT QUERIES ---- */}
         <div>
@@ -149,3 +156,5 @@ const Coordinators = () => {
 };
 
 export default Coordinators;
+
+again im getting error
