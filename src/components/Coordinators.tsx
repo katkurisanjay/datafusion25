@@ -19,6 +19,14 @@ const Coordinators = () => {
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg' // ← Replace later
       }
     ],
+
+  faculty: [
+      { 
+        name: 'Mohammad Sohail', 
+        role: 'Assistant Professor, VCE',
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/sohail_jc0qr1.jpg' // ← Replace later
+      }
+    ],
     
     club: [
       { 
@@ -27,13 +35,7 @@ const Coordinators = () => {
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg' // ← Replace later
       }
     ],
-     faculty: [
-      { 
-        name: 'Mohammad Sohail', 
-        role: 'Assistant Professor, VCE',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/sohail_jc0qr1.jpg' // ← Replace later
-      }
-    ],
+    
 
    
 
