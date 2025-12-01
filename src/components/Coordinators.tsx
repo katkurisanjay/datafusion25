@@ -8,7 +8,7 @@ const Coordinators = () => {
     { 
       name: 'Dr. K. Prakash', 
       role: 'Principal, VCE',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584378/Dr.K.Prakash_d9lo0d.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764603809/Dr.K.Prakash_d9lo0d.jpg'
     }
     ],
 
