@@ -16,25 +16,26 @@ const Coordinators = () => {
       { 
         name: 'Dr. Ayesha Banu', 
         role: 'HOD, CSE-DS',
-        img: '/images/convenor.jpg' // ← Replace later
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg' // ← Replace later
       }
     ],
-
-    faculty: [
+    
+    club: [
+      { 
+        name: 'Mohammad Sohail', 
+        role: 'Assistant Professor',
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/sohail_jc0qr1.jpg' // ← Replace later
+      }
+    ],
+     faculty: [
       { 
         name: 'Mrs. Zareena Begum', 
         role: 'Assistant Professor, VCE',
-        img: '/images/faculty1.jpg' // ← Replace later
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584484/zareena_mam_zjcg6k.jpg' // ← Replace later
       }
     ],
 
-    club: [
-      { 
-        name: 'Mrs. G. Pallavi', 
-        role: 'Assistant Professor',
-        img: '/images/club1.jpg' // ← Replace later
-      }
-    ],
+   
 
     student: [
       { 
