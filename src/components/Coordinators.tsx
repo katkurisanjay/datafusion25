@@ -42,7 +42,7 @@ const Coordinators = () => {
       { 
         name: 'Aishwarya', 
         role: 'Vice Chair',
-        img: '/images/student2.jpg'
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764666343/aishwarya_iaofyc.jpg'
       }
     ],
   };
