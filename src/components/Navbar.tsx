@@ -4,6 +4,7 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
@@ -19,19 +20,21 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Determine active section based on scroll position
-      const sections = navLinks.map(link => {
-        const element = document.getElementById(link.id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return { id: link.id, top: rect.top, bottom: rect.bottom };
-        }
-        return null;
-      }).filter(Boolean) as { id: string; top: number; bottom: number }[];
+      const sections = navLinks
+        .map((link) => {
+          const element = document.getElementById(link.id);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return { id: link.id, top: rect.top, bottom: rect.bottom };
+          }
+          return null;
+        })
+        .filter(Boolean);
 
-      const currentSection = sections.find(
-        section => section.top <= 100 && section.bottom >= 100
-      ) || sections.find(section => section.top > 0 && section.top < 200);
+      const currentSection =
+        sections.find(
+          (section) => section.top <= 100 && section.bottom >= 100
+        ) || sections.find((section) => section.top > 0 && section.top < 200);
 
       if (currentSection) {
         setActiveSection(currentSection.id);
@@ -39,15 +42,15 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // Account for sticky navbar
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -55,24 +58,38 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: 'smooth',
       });
-      setIsMobileMenuOpen(false); // Close menu after clicking
+
+      setIsMobileMenuOpen(false);
     }
   };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        (isScrolled || isMobileMenuOpen)
+        isScrolled || isMobileMenuOpen
           ? 'bg-dark-card/95 backdrop-blur-md border-b border-dark-border'
           : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-primary">
-            DATA FUSION
-          </div>
 
+          {/* ▶️ LOGO + TITLE */}
+          <button
+            onClick={() => scrollToSection('home')}
+            className="flex items-center space-x-2 cursor-pointer"
+          >
+            <img
+              src="https://your-cloudinary-logo-link.png"  // <-- Replace this
+              alt="Data Fusion Logo"
+              className="h-10 w-auto object-contain"
+            />
+            <span className="text-2xl font-bold text-primary tracking-wide">
+              DATA FUSION
+            </span>
+          </button>
+
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <button
@@ -89,17 +106,13 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
-          <button className="md:hidden text-white"
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             title="Toggle mobile menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -134,4 +147,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
