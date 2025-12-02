@@ -75,7 +75,7 @@ const Navbar = () => {
           {/* Logo + Text */}
           <div className="flex items-center space-x-2">
             <img
-              src="/logo.png" // put your logo in public/logo.png
+              src="https://res.cloudinary.com/dika0ttaj/image/upload/v1764675584/logo_mclsgt.jpg" // put your logo in public/logo.png
               alt="Data Fusion Logo"
               className="h-8 w-8 md:h-10 md:w-10 object-contain"
             />
