@@ -1,49 +1,42 @@
 "use client";
-import { useState, useEffect } from "react";
+import Slider from "react-slick";
+import Image from "next/image";
 
-const images = [
-  "/events/event1.jpg",
-  "/events/event2.jpg",
-  "/events/event3.jpg",
-  "/events/event4.jpg",
-];
+const ImageSlider = () => {
+  const images = [
+    "https://picsum.photos/800/500?random=1",
+    "https://picsum.photos/800/500?random=2",
+    "https://picsum.photos/800/500?random=3",
+    "https://picsum.photos/800/500?random=4",
+  ];
 
-export default function ImageSlider() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+  };
 
   return (
-    <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-xl">
-      {images.map((img, i) => (
-        <img
-          key={i}
-          src={img}
-          alt="event"
-          className={`absolute w-full h-full object-cover transition-opacity duration-700 ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
-
-      {/* dots */}
-      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
-        {images.map((_, i) => (
-          <div
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              index === i ? "bg-white" : "bg-white/40"
-            }`}
-          />
+    <div className="w-full max-w-4xl mx-auto">
+      <Slider {...settings}>
+        {images.map((img, index) => (
+          <div key={index} className="relative w-full h-64 md:h-96">
+            <Image
+              src={img}
+              alt={`Slide ${index}`}
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
-}
+};
+
+export default ImageSlider;
