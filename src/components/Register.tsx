@@ -339,7 +339,7 @@ const Register = () => {
                 <div className="flex flex-col items-center">
                   <div className="w-64 h-64 bg-white rounded-lg p-4 mb-4 flex items-center justify-center">
                     <img
-                      src="https://res.cloudinary.com/dika0ttaj/image/upload/v1764509682/scanner_oqixnx.jpg"
+                      src="https://res.cloudinary.com/dika0ttaj/image/upload/v1764661727/scanner_oqixnx.jpg"
                       alt="UPI QR Code"
                       className="w-full h-full object-contain"
                     />
