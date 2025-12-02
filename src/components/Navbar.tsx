@@ -72,13 +72,16 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Bigger logo */}
-          <div className="flex items-center">
+          {/* Logo + text */}
+          <div className="flex items-center space-x-3">
             <img
               src="https://res.cloudinary.com/dika0ttaj/image/upload/v1764686077/logo_mclsgt.png"
               alt="Data Fusion Logo"
-              className="h-16 w-16 md:h-20 md:w-20 object-contain"
+              className="h-12 w-12 md:h-14 md:w-14 object-contain"
             />
+            <span className="text-xl md:text-2xl font-bold text-primary tracking-wide">
+              DATA FUSION
+            </span>
           </div>
 
           {/* Desktop nav links */}
@@ -142,6 +145,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;
