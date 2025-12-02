@@ -47,7 +47,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       const offset = 80;
@@ -74,13 +74,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
 
-          {/* ▶️ LOGO + TITLE */}
+          {/* LOGO + TITLE */}
           <button
             onClick={() => scrollToSection('home')}
             className="flex items-center space-x-2 cursor-pointer"
           >
             <img
-              src="https://your-cloudinary-logo-link.png"  // <-- Replace this
+              src="https://res.cloudinary.com/dika0ttaj/image/upload/v1733123456/your-logo.png"
               alt="Data Fusion Logo"
               className="h-10 w-auto object-contain"
             />
