@@ -15,7 +15,7 @@ const Coordinators = () => {
     convenor: [
       { 
         name: 'Dr. Ayesha Banu', 
-        role: 'HOD, CSE-DS',
+        role: 'HOD, CSE-DS, VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
       }
     ],
