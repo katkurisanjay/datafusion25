@@ -91,12 +91,12 @@ const Coordinators = () => {
           {coordinators.convenor.map((person, index) => (
             <div 
               key={index} 
-              className="glass-effect rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl hover:shadow-accent/40 transition-all"
+              className="glass-effect rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 transition-all"
             >
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-accent/40">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary/40">
                 <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-accent mb-2">Convenor</h3>
+              <h3 className="text-xl font-bold text-primary mb-2">Convenor</h3>
               <p className="text-text-primary font-semibold">{person.name}</p>
               <p className="text-text-muted text-sm">{person.role}</p>
             </div>
@@ -106,12 +106,12 @@ const Coordinators = () => {
           {coordinators.faculty.map((person, index) => (
             <div 
               key={index} 
-              className="glass-effect rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl hover:shadow-secondary/40 transition-all"
+              className="glass-effect rounded-2xl p-6 text-center hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 transition-all"
             >
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-secondary/40">
+              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-2 border-primary/40">
                 <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-2">Faculty Coordinator</h3>
+              <h3 className="text-xl font-bold text-primary mb-2">Faculty Coordinator</h3>
               <p className="text-text-primary font-semibold">{person.name}</p>
               <p className="text-text-muted text-sm">{person.role}</p>
             </div>
@@ -126,10 +126,10 @@ const Coordinators = () => {
             {coordinators.student.map((person, index) => (
               <div 
                 key={index} 
-                className="glass-effect rounded-2xl p-6 glow-accent hover:scale-105 hover:shadow-2xl hover:shadow-accent/40 transition-all"
+                className="glass-effect rounded-2xl p-6 glow-accent hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 transition-all"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-accent/40">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-primary/40">
                     <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
                   </div>
 
@@ -152,7 +152,7 @@ const Coordinators = () => {
             {contactQueries.map((contact, index) => (
               <div key={index} className="glass-effect rounded-lg p-4 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all">
                 <p className="text-text-primary font-semibold mb-2">{contact.name}</p>
-                <a href={`tel:+91${contact.phone}`} className="text-accent hover:text-primary transition-colors">
+                <a href={`tel:+91${contact.phone}`} className="text-primary hover:text-primary/80 transition-colors">
                   {contact.phone}
                 </a>
               </div>
