@@ -15,7 +15,7 @@ const Coordinators = () => {
     convenor: [
       { 
         name: 'Dr. Ayesha Banu', 
-        role: 'HOD, CSE-DS, VCE',
+        role: 'HOD, CSE(DS), VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
       }
     ],
@@ -23,12 +23,12 @@ const Coordinators = () => {
     faculty: [
       { 
         name: 'Mrs. Zareena Begum', 
-        role: 'Assistant Professor, CSE-DS, VCE',
+        role: 'Assistant Professor, CSE(DS), VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764766339/WhatsApp_Image_2025-12-03_at_14.40.24_8cce187f_qsmxrb.jpg'
       },
       { 
         name: 'Mohammad Sohail', 
-        role: 'Assistant Professor, CSE-DS, VCE',
+        role: 'Assistant Professor, CSE(DS), VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764607739/sohail_jc0qr1.jpg'
       }
     ],
@@ -138,7 +138,7 @@ const Coordinators = () => {
                   <p className="text-secondary text-sm mb-3">{person.role}</p>
 
                   <p className="text-text-secondary text-sm">
-                    CSE - Data Science, Vaagdevi College of Engineering
+                    CSE (Data Science), 4th Year, VCE
                   </p>
                 </div>
               </div>
