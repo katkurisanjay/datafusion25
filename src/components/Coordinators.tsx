@@ -138,7 +138,7 @@ const Coordinators = () => {
                   <p className="text-secondary text-sm mb-3">{person.role}</p>
 
                   <p className="text-text-secondary text-sm">
-                    CSE (Data Science), 4th Year, VCE
+                     4th Year, CSE (Data Science), VCE
                   </p>
                 </div>
               </div>
