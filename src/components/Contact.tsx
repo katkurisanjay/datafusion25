@@ -12,7 +12,7 @@ const Contact = () => {
           <div className="text-center space-y-6">
             <div>
               <h3 className="text-2xl font-bold text-accent mb-4">
-                Vaagdevi College of Engineering
+                Department Of CSE (Data Science) Vaagdevi College of Engineering
               </h3>
               <p className="text-text-secondary mb-2">
                 Bollikunta, Khila Warangal (Mandal)
@@ -27,16 +27,16 @@ const Contact = () => {
                 href="mailto:info@vaagdevi.edu.in"
                 className="flex items-center justify-center space-x-2 text-accent hover:text-primary transition-colors"
               >
-                <span>📧</span>
-                <span>info@vaagdevi.edu.in</span>
+                {/* <span>📧</span> */}
+                <span></span>
               </a>
 
               <a
                 href="tel:+918886536969"
                 className="flex items-center justify-center space-x-2 text-accent hover:text-primary transition-colors"
               >
-                <span>📞</span>
-                <span>+91-8886536969</span>
+                {/* <span>📞</span> */}
+                <span></span>
               </a>
             </div>
 
