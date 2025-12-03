@@ -126,15 +126,17 @@ const Coordinators = () => {
             {coordinators.student.map((person, index) => (
               <div 
                 key={index} 
-                className="glass-effect rounded-2xl p-6 glow-accent hover:scale-105 hover:shadow-2xl hover:shadow-primary/40 transition-all"
+                className="glass-effect rounded-2xl p-6 hover:scale-105 hover:shadow-2xl hover:shadow-secondary/40 transition-all"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-primary/40">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-secondary/40">
                     <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
                   </div>
 
-                  <h4 className="text-xl font-bold text-primary mb-2">{person.name}</h4>
-                  <p className="text-text-muted text-sm mb-3">{person.role}</p>
+                  {/* VIOLET NAME + ROLE */}
+                  <h4 className="text-xl font-bold text-secondary mb-2">{person.name}</h4>
+                  <p className="text-secondary text-sm mb-3">{person.role}</p>
+
                   <p className="text-text-secondary text-sm">
                     CSE - Data Science, Vaagdevi College of Engineering
                   </p>
@@ -152,7 +154,7 @@ const Coordinators = () => {
             {contactQueries.map((contact, index) => (
               <div key={index} className="glass-effect rounded-lg p-4 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all">
                 <p className="text-text-primary font-semibold mb-2">{contact.name}</p>
-                <a href={`tel:+91${contact.phone}`} className="text-primary hover:text-primary/80 transition-colors">
+                <a href={`tel:+91${contact.phone}`} className="text-accent hover:text-primary transition-colors">
                   {contact.phone}
                 </a>
               </div>
