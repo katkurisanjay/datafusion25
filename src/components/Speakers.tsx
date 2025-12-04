@@ -5,32 +5,32 @@ const Speakers = () => {
 
   const speakers = [
     {
-      name: 'Dr. Rajesh Kumar',
-      designation: 'AI & ML Expert',
-      company: 'Tech Innovators',
+      // name: 'Dr. Rajesh Kumar',
+      designation: 'STAY TUNED', 
+      // company: 'Tech Innovators',
       linkedin: 'https://linkedin.com/in/rajesh-kumar',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764603809/Dr.K.Prakash_d9lo0d.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
-      name: 'Ms. Priya Sharma',
-      designation: 'Data Science Lead',
-      company: 'Data Solutions Inc',
+      // name: 'Ms. Priya Sharma',
+      designation: 'STAY TUNED', 
+      // company: 'Data Solutions Inc',
       linkedin: 'https://linkedin.com/in/priya-sharma',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
-      name: 'Mr. Arjun Singh',
-      designation: 'Cloud Architecture Expert',
-      company: 'Cloud Systems',
+      // name: 'Mr. Arjun Singh',
+      designation: 'STAY TUNED', 
+      // company: 'Cloud Systems',
       linkedin: 'https://linkedin.com/in/arjun-singh',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764766339/WhatsApp_Image_2025-12-03_at_14.40.24_8cce187f_qsmxrb.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
-      name: 'Dr. Ananya Patel',
-      designation: 'Cybersecurity Specialist',
-      company: 'SecureNet',
+      // name: 'Dr. Ananya Patel',
+      designation: 'STAY TUNED', 
+      // company: 'SecureNet',
       linkedin: 'https://linkedin.com/in/ananya-patel',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764607739/sohail_jc0qr1.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     }
   ];
 
