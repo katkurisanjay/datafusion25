@@ -48,12 +48,12 @@ const Coordinators = () => {
   };
 
   const contactQueries = [
-    { name: 'Jaleel', phone: '9347277723' },
-    { name: 'Siddharth', phone: '9133776565' },
-    { name: 'Sarika', phone: '9908997987' },
-    { name: 'Pardhiv', phone: '8309019959' },
-    { name: 'Saathwik', phone: '7672036882' },
-    { name: 'Charan', phone: '9381187033' },
+    { name: 'Stalin', phone: '9908501041' },
+    { name: 'Karthik', phone: '9666924767' },
+    { name: 'Shruthi', phone: '6300723368' },
+    { name: 'Deepak', phone: '9652621598' },
+    { name: 'Anusha', phone: '9618443347' },
+    { name: 'Shivani', phone: '9347518387' },
   ];
 
   return (
