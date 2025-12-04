@@ -16,7 +16,7 @@ const Coordinators = () => {
       { 
         name: 'Dr. Ayesha Banu', 
         role: 'HOD, CSE(DS), VCE',
-        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764873062/copy_of_hod_2a2391.jpg'
+        img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764872965/ZllBJt9Dl3nPBtoLmGaWrqeBY_siq8tz.jpg'
       }
     ],
 
