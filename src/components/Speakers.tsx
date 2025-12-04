@@ -8,28 +8,28 @@ const Speakers = () => {
       name: '',
       designation: 'STAY TUNED', 
       company: '',
-      linkedin: 'https://linkedin.com/in/rajesh-kumar',
+      linkedin: '',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
       name: '',
       designation: 'STAY TUNED', 
       company: '',
-      linkedin: 'https://linkedin.com/in/priya-sharma',
+      linkedin: '',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
       name: '',
       designation: 'STAY TUNED', 
       company: '',
-      linkedin: 'https://linkedin.com/in/arjun-singh',
+      linkedin: '',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
       name: '',
       designation: 'STAY TUNED', 
       company: '',
-      linkedin: 'https://linkedin.com/in/ananya-patel',
+      linkedin: '',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     }
   ];
