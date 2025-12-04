@@ -22,7 +22,7 @@ const Register = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   // Google Apps Script URL - Update this with your actual Google Apps Script web app URL
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwythtUbhhF8geeB56C-NQeRFanaIMYawsNLVoRacC4MowahiQcpMqQ_6Gz0TtPhdKkw/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwz4L2PyiYUKuEkkSdo3xfKRwcVvtCnN13enz-B0aapqyLBjEQ5H6k6jRfX7yN3TDAx2Q/exec';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
