@@ -8,43 +8,29 @@ const Speakers = () => {
       name: 'Dr. Rajesh Kumar',
       designation: 'AI & ML Expert',
       company: 'Tech Innovators',
-      phone: '9876543210',
+      linkedin: 'https://linkedin.com/in/rajesh-kumar',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764603809/Dr.K.Prakash_d9lo0d.jpg'
     },
     {
       name: 'Ms. Priya Sharma',
       designation: 'Data Science Lead',
       company: 'Data Solutions Inc',
-      phone: '9123456789',
+      linkedin: 'https://linkedin.com/in/priya-sharma',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764584482/hod_ymkniv.jpg'
     },
     {
       name: 'Mr. Arjun Singh',
       designation: 'Cloud Architecture Expert',
       company: 'Cloud Systems',
-      phone: '9987654321',
+      linkedin: 'https://linkedin.com/in/arjun-singh',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764766339/WhatsApp_Image_2025-12-03_at_14.40.24_8cce187f_qsmxrb.jpg'
     },
     {
       name: 'Dr. Ananya Patel',
       designation: 'Cybersecurity Specialist',
       company: 'SecureNet',
-      phone: '8765432109',
+      linkedin: 'https://linkedin.com/in/ananya-patel',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764607739/sohail_jc0qr1.jpg'
-    },
-    {
-      name: 'Mr. Vikram Das',
-      designation: 'Software Architect',
-      company: 'Tech Ventures',
-      phone: '7654321098',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764607255/sirajj_j7nf9j.jpg'
-    },
-    {
-      name: 'Ms. Sarah Johnson',
-      designation: 'Full Stack Developer',
-      company: 'Digital Innovations',
-      phone: '9111111111',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764666343/aishwarya_iaofyc.jpg'
     }
   ];
 
@@ -88,38 +74,24 @@ const Speakers = () => {
                 transform: translateX(0);
               }
               100% {
-                transform: translateX(-100%);
-              }
-            }
-
-            @keyframes marquee-reverse {
-              0% {
-                transform: translateX(-100%);
-              }
-              100% {
-                transform: translateX(0);
+                transform: translateX(calc(-100% / 2));
               }
             }
 
             .marquee {
-              animation: marquee 40s linear infinite;
+              animation: marquee 50s linear infinite;
             }
 
-            .marquee-reverse {
-              animation: marquee-reverse 40s linear infinite;
-            }
-
-            .marquee:hover,
-            .marquee-reverse:hover {
+            .marquee:hover {
               animation-play-state: paused;
             }
           `}</style>
 
-          {/* Marquee Track 1 - Left to Right */}
+          {/* Marquee Track - Left to Right */}
           <div className="overflow-hidden py-8">
             <div className="marquee flex gap-6 w-max">
               {speakers.map((speaker, index) => (
-                <div key={`marquee1-${index}`} className="flex-shrink-0 w-80">
+                <div key={`marquee-${index}`} className="flex-shrink-0 w-80">
                   <div className="glass-effect rounded-2xl p-6 h-full border border-primary/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/30">
                     {/* Speaker Image */}
                     <div className="w-full h-48 rounded-xl overflow-hidden mb-4 border-2 border-primary/40">
@@ -137,17 +109,19 @@ const Speakers = () => {
 
                     {/* Contact */}
                     <a 
-                      href={`tel:+91${speaker.phone}`}
+                      href={speaker.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block px-4 py-2 bg-primary/20 hover:bg-primary/40 border border-primary/50 rounded-lg text-primary hover:text-white transition-all text-sm font-medium"
                     >
-                      📞 {speaker.phone}
+                      🔗 Connect on LinkedIn
                     </a>
                   </div>
                 </div>
               ))}
               {/* Duplicate for seamless loop */}
               {speakers.map((speaker, index) => (
-                <div key={`marquee1-dup-${index}`} className="flex-shrink-0 w-80">
+                <div key={`marquee-dup-${index}`} className="flex-shrink-0 w-80">
                   <div className="glass-effect rounded-2xl p-6 h-full border border-primary/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/30">
                     <div className="w-full h-48 rounded-xl overflow-hidden mb-4 border-2 border-primary/40">
                       <img 
@@ -160,61 +134,12 @@ const Speakers = () => {
                     <p className="text-accent font-semibold text-sm mb-1">{speaker.designation}</p>
                     <p className="text-text-secondary text-sm mb-4">{speaker.company}</p>
                     <a 
-                      href={`tel:+91${speaker.phone}`}
+                      href={speaker.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block px-4 py-2 bg-primary/20 hover:bg-primary/40 border border-primary/50 rounded-lg text-primary hover:text-white transition-all text-sm font-medium"
                     >
-                      📞 {speaker.phone}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Marquee Track 2 - Right to Left */}
-          <div className="overflow-hidden py-8">
-            <div className="marquee-reverse flex gap-6 w-max">
-              {speakers.slice().reverse().map((speaker, index) => (
-                <div key={`marquee2-${index}`} className="flex-shrink-0 w-80">
-                  <div className="glass-effect rounded-2xl p-6 h-full border border-secondary/20 hover:border-secondary/50 transition-all hover:shadow-2xl hover:shadow-secondary/30">
-                    <div className="w-full h-48 rounded-xl overflow-hidden mb-4 border-2 border-secondary/40">
-                      <img 
-                        src={speaker.img} 
-                        alt={speaker.name} 
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <h3 className="text-xl font-bold text-secondary mb-2">{speaker.name}</h3>
-                    <p className="text-accent font-semibold text-sm mb-1">{speaker.designation}</p>
-                    <p className="text-text-secondary text-sm mb-4">{speaker.company}</p>
-                    <a 
-                      href={`tel:+91${speaker.phone}`}
-                      className="inline-block px-4 py-2 bg-secondary/20 hover:bg-secondary/40 border border-secondary/50 rounded-lg text-secondary hover:text-white transition-all text-sm font-medium"
-                    >
-                      📞 {speaker.phone}
-                    </a>
-                  </div>
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {speakers.slice().reverse().map((speaker, index) => (
-                <div key={`marquee2-dup-${index}`} className="flex-shrink-0 w-80">
-                  <div className="glass-effect rounded-2xl p-6 h-full border border-secondary/20 hover:border-secondary/50 transition-all hover:shadow-2xl hover:shadow-secondary/30">
-                    <div className="w-full h-48 rounded-xl overflow-hidden mb-4 border-2 border-secondary/40">
-                      <img 
-                        src={speaker.img} 
-                        alt={speaker.name} 
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <h3 className="text-xl font-bold text-secondary mb-2">{speaker.name}</h3>
-                    <p className="text-accent font-semibold text-sm mb-1">{speaker.designation}</p>
-                    <p className="text-text-secondary text-sm mb-4">{speaker.company}</p>
-                    <a 
-                      href={`tel:+91${speaker.phone}`}
-                      className="inline-block px-4 py-2 bg-secondary/20 hover:bg-secondary/40 border border-secondary/50 rounded-lg text-secondary hover:text-white transition-all text-sm font-medium"
-                    >
-                      📞 {speaker.phone}
+                      🔗 Connect on LinkedIn
                     </a>
                   </div>
                 </div>
