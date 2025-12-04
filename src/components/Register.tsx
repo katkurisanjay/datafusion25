@@ -401,7 +401,7 @@ const Register = () => {
                   className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-text-primary focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
                   placeholder="Enter receipt number if you have one"
                 />
-                <p className="text-text-muted text-xs mt-1">If you already paid and have a receipt, enter its number here; .</p>
+                <p className="text-text-muted text-xs mt-1">If you already paid and have a receipt, enter its number here; If not contact Registration Team</p>
               </div>
             </div>
           )}
