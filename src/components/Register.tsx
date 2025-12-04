@@ -14,6 +14,7 @@ const Register = () => {
     collegeName: '',
     paymentMethod: '',
     transactionId: '',
+    receiptNo: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,6 +73,7 @@ const Register = () => {
       setErrorMessage('Transaction ID is required for online payment');
       return false;
     }
+    // Receipt number is optional for offline payments; do not require it here
     return true;
   };
 
@@ -101,6 +103,7 @@ const Register = () => {
         collegeName: formData.collegeName,
         paymentMethod: formData.paymentMethod,
         transactionId: formData.paymentMethod === 'Online' ? formData.transactionId : '',
+        receiptNo: formData.paymentMethod === 'Offline' ? formData.receiptNo : '',
       };
 
       // Send to Google Apps Script
@@ -128,6 +131,7 @@ const Register = () => {
         collegeName: '',
         paymentMethod: '',
         transactionId: '',
+        receiptNo: '',
       });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -383,6 +387,21 @@ const Register = () => {
                 <p className="text-text-muted text-sm mt-2">
                   Payment can be made at the registration desk during the event
                 </p>
+              </div>
+              <div className="mt-4">
+                <label htmlFor="receiptNo" className="block text-sm font-medium text-gray-300 mb-2">
+                  Receipt Number (optional)
+                </label>
+                <input
+                  type="text"
+                  id="receiptNo"
+                  name="receiptNo"
+                  value={formData.receiptNo}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-text-primary focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
+                  placeholder="Enter receipt number if you have one"
+                />
+                <p className="text-text-muted text-xs mt-1">If you already paid and have a receipt, enter its number here; otherwise leave empty.</p>
               </div>
             </div>
           )}
