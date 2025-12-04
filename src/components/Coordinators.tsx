@@ -27,7 +27,7 @@ const Coordinators = () => {
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764766339/WhatsApp_Image_2025-12-03_at_14.40.24_8cce187f_qsmxrb.jpg'
       },
       { 
-        name: 'Mohammad Sohail', 
+        name: 'Mr. Mohammad Sohail', 
         role: 'Assistant Professor, CSE(DS), VCE',
         img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764607739/sohail_jc0qr1.jpg'
       }
