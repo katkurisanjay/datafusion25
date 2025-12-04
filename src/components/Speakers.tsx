@@ -5,30 +5,30 @@ const Speakers = () => {
 
   const speakers = [
     {
-      // name: 'Dr. Rajesh Kumar',
+      name: '',
       designation: 'STAY TUNED', 
-      // company: 'Tech Innovators',
+      company: '',
       linkedin: 'https://linkedin.com/in/rajesh-kumar',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
-      // name: 'Ms. Priya Sharma',
+      name: '',
       designation: 'STAY TUNED', 
-      // company: 'Data Solutions Inc',
+      company: '',
       linkedin: 'https://linkedin.com/in/priya-sharma',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
-      // name: 'Mr. Arjun Singh',
+      name: '',
       designation: 'STAY TUNED', 
-      // company: 'Cloud Systems',
+      company: '',
       linkedin: 'https://linkedin.com/in/arjun-singh',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
-      // name: 'Dr. Ananya Patel',
+      name: '',
       designation: 'STAY TUNED', 
-      // company: 'SecureNet',
+      company: '',
       linkedin: 'https://linkedin.com/in/ananya-patel',
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     }
