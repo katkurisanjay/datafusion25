@@ -382,10 +382,10 @@ const Register = () => {
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-lg font-bold text-warning mb-2">Offline Payment</h3>
                 <p className="text-text-secondary">
-                   If you already paid and have a receipt, enter its number here. If not contact Registration Team
+                   If You Already Paid And Have a Eeceipt, Enter its Number Here. If Not Contact Registration Team
                 </p>
                 <p className="text-text-muted text-sm mt-2">
-                   Pay and collect your pass
+                   Please Pay and Collect Your Pass
                 </p>
               </div>
               <div className="mt-4">
