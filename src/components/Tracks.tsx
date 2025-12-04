@@ -5,7 +5,7 @@ const Tracks = () => {
   
   const technicalTracks = [
     {
-      name: 'Data Essentials',
+      name: 'Privacy-Preserving Data Analytics',
       description: 'Hands-on introduction to core data concepts and fundamentals',
     },
     {
@@ -13,15 +13,19 @@ const Tracks = () => {
       description: 'Explore the power of Generative AI and its applications',
     },
     {
-      name: 'Innovators Edge',
+      name: 'Responsible AI and Fair Data Integration',
       description: 'Showcase your innovative ideas and creative solutions',
     },
     {
-      name: 'Tech Utilities',
+      name: 'Intrusion Detection in Fusion Networks',
       description: 'Master essential data science tools and utilities',
     },
     {
-      name: 'Career Sprint',
+      name: 'Data Anonymization',
+      description: 'Accelerate your career with industry insights and guidance',
+    },
+    {
+      name: 'Professional Guidance',
       description: 'Accelerate your career with industry insights and guidance',
     },
   ];
@@ -32,20 +36,24 @@ const Tracks = () => {
       description: 'Compete in thrilling gaming battles and showcase your skills',
     },
     {
-      name: 'Cultural Events',
+      name: 'BrainSpark Quiz League',
       description: 'Express your creativity through various cultural performances',
     },
     {
-      name: 'Pick and Speak',
+      name: 'Fusion Fiesta',
       description: 'Test your quick thinking and public speaking abilities',
+    },
+    {
+      name: 'EduGames Carnival',
+      description: 'Test your quick thinking and public speaking abilities',
+    },
+    {
+      name: 'Code-Less Challenge',
+      description: 'Solve clues and complete exciting challenges around campus',
     },
     {
       name: 'Ramp Walk',
       description: 'Walk the ramp and showcase your confidence and style',
-    },
-    {
-      name: 'Scavenger Hunt',
-      description: 'Solve clues and complete exciting challenges around campus',
     },
   ];
 
