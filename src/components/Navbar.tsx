@@ -11,6 +11,7 @@ const Navbar = () => {
     { id: 'tracks', label: 'Events' },
     { id: 'schedule', label: 'Schedule' },
     { id: 'highlights', label: 'Highlights' },
+    { id: 'speakers', label: 'Speakers' },
     { id: 'coordinators', label: 'Coordinators' },
     { id: 'contact', label: 'Contact' },
     { id: 'register', label: '🚀 Register' },

@@ -4,6 +4,7 @@ import About from './components/About';
 import Tracks from './components/Tracks';
 import Schedule from './components/Schedule';
 import Highlights from './components/Highlights';
+import Speakers from './components/Speakers';
 import Coordinators from './components/Coordinators';
 import Register from './components/Register';
 import FAQ from './components/FAQ';
@@ -23,6 +24,7 @@ function App() {
         <Tracks />
         <Schedule />
         <Highlights />
+        <Speakers />
         <Coordinators />
         <Register />
         <FAQ />
