@@ -398,6 +398,7 @@ const Register = () => {
                   name="receiptNo"
                   value={formData.receiptNo}
                   onChange={handleChange}
+                  required={formData.paymentMethod === 'Offline'}
                   className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded-lg text-text-primary focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
                   placeholder="Enter receipt number if you have one"
                 />
