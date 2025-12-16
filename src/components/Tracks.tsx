@@ -37,23 +37,23 @@ const Tracks = () => {
     },
     {
       name: 'BrainSpark Quiz League',
-      description: 'Express your creativity through various cultural performances',
+      description: 'Challenge your knowledge and thinking skills in an exciting competitive quiz format',
     },
     {
       name: 'Fusion Fiesta',
-      description: 'Test your quick thinking and public speaking abilities',
+      description: 'Showcase your creativity and talent through vibrant cultural and fun activities',
     },
     {
       name: 'EduGames Carnival',
-      description: 'Test your quick thinking and public speaking abilities',
+      description: 'Learn while having fun through interactive educational games and challenges.',
     },
     {
       name: 'Code-Less Challenge',
-      description: 'Solve clues and complete exciting challenges around campus',
+      description: 'Solve logical puzzles and campus-based challenges without writing a single line of code',
     },
     {
       name: 'Ramp Walk',
-      description: 'Walk the ramp and showcase your confidence and style',
+      description: 'Walk the ramp to showcase your confidence, personality, and unique style.',
     },
   ];
 
