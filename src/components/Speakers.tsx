@@ -30,7 +30,7 @@ const Speakers = () => {
       designation: 'Assistant Professor Department of Computer Applications,Experience: 8 years (4 Years Industry + 4 Years Teaching)', 
       company: ' NIT Tiruchirappalli, Tamil Nadu',
       linkedin: 'vinayraj@nitt.edu',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869118/speaker_4_eqogcr.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765870014/speaker_4_eqogcr.jpg'
     }
   ];
 
