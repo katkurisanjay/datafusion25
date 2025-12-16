@@ -16,14 +16,14 @@ const Speakers = () => {
       designation: 'Associate Professor', 
       company: 'Woxsen university',
       linkedin: 'https://www.linkedin.com/in/amit-v-s-85077617/',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869117/speaker_2_ax7wjt.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869662/speaker_2_ax7wjt.jpg'
     },
     {
       name: 'Mohammed Hidayath Ali ',
       designation: 'Vice President', 
       company: 'Appizion Consulting & Solutions, Hyderabad',
       linkedin: 'https://www.linkedin.com/in/mohammed-hidayath-ali-008286256/',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869662/speaker_2_ax7wjt.jpg'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869118/speaker_3_xylrkf.jpg'
     },
     {
       name: '',
