@@ -133,14 +133,14 @@ const Speakers = () => {
                     <h3 className="text-xl font-bold text-primary mb-2">{speaker.name}</h3>
                     <p className="text-accent font-semibold text-sm mb-1">{speaker.designation}</p>
                     <p className="text-text-secondary text-sm mb-4">{speaker.company}</p>
-                    {/* <a 
+                    {<a 
                       href={speaker.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-4 py-2 bg-primary/20 hover:bg-primary/40 border border-primary/50 rounded-lg text-primary hover:text-white transition-all text-sm font-medium"
                     >
                       🔗 Connect on LinkedIn
-                    </a> */}
+                    </a> } 
                   </div>
                 </div>
               ))}
