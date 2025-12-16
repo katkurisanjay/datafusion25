@@ -47,9 +47,10 @@ const Hero = () => {
         </p>
 
         {/* Subtitle */}
-        <p className="text-2xl md:text-3xl text-violet-400 mb-8 animate-slide-up">
-          Privacy-Preserving Fusion
-        </p>
+      <p className="text-4xl md:text-5xl font-extrabold tracking-wide text-violet-500 mb-8 animate-slide-up">
+        Privacy-Preserving Fusion
+      </p>
+
 
 
         {/* Prominent Register Button */}
