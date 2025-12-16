@@ -26,11 +26,11 @@ const Speakers = () => {
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869118/speaker_3_xylrkf.jpg'
     },
     {
-      name: '',
-      designation: 'STAY TUNED', 
-      company: '',
-      linkedin: '',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
+      name: 'Dr. Vinay Raj',
+      designation: 'Assistant Professor Department of Computer Applications,Experience: 8 years (4 Years Industry + 4 Years Teaching)', 
+      company: ' NIT Tiruchirappalli, Tamil Nadu',
+      linkedin: 'vinayraj@nitt.edu',
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869118/speaker_4_eqogcr.jpg'
     }
   ];
 
