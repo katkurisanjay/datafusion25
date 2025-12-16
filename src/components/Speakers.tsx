@@ -9,7 +9,7 @@ const Speakers = () => {
       designation: 'Vocal Image Mentor | Leadership Trainer | Career Coach', 
       company: 'Head Center of Talent Development & Study Abroad Cell | Author | Learning & Development | National Award Winner',
       linkedin: 'https://www.linkedin.com/in/bernardbhutia/?originalSubdomain=in',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765868037/bernard-bhutia-HERO_sgeyzn.png'
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765868131/bernard-bhutia-HERO_sgeyzn.png'
     },
     {
       name: '',
