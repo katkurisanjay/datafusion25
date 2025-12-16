@@ -48,11 +48,16 @@ const Hero = () => {
 
         
         {/* Subtitle */}
-       <p className="text-4xl md:text-5xl font-extrabold tracking-wider 
-        text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-600 
-        mb-8 animate-slide-up">
+        <p
+          className="text-5xl md:text-6xl font-extrabold tracking-widest 
+          text-transparent bg-clip-text 
+          bg-gradient-to-r from-violet-400 via-purple-500 to-fuchsia-500
+          drop-shadow-[0_0_20px_rgba(139,92,246,0.8)]
+          mb-10 animate-slide-up"
+        >
           Privacy-Preserving Fusion
         </p>
+
 
 
 
