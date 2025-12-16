@@ -6,23 +6,23 @@ const Tracks = () => {
   const technicalTracks = [
     {
       name: 'Privacy-Preserving Data Analytics',
-      description: 'Hands-on introduction to core data concepts and fundamentals',
+      description: 'Analyze data securely while protecting sensitive information using modern privacy techniques',
     },
     {
       name: 'GenAI Power',
-      description: 'Explore the power of Generative AI and its applications',
+      description: 'Explore how Generative AI creates intelligent content and solutions across real-world applications',
     },
     {
       name: 'Responsible AI and Fair Data Integration',
-      description: 'Showcase your innovative ideas and creative solutions',
+      description: 'Build ethical, transparent, and unbiased AI systems using responsible data practices',
     },
     {
       name: 'Intrusion Detection in Fusion Networks',
-      description: 'Master essential data science tools and utilities',
+      description: 'Detect cyber threats and anomalies in fusion networks using intelligent security techniques',
     },
     {
       name: 'Data Anonymization',
-      description: 'Accelerate your career with industry insights and guidance',
+      description: 'Gain expert mentorship and career insights to succeed in data science and AI fields.',
     },
     {
       name: 'Professional Guidance',
