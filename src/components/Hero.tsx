@@ -46,10 +46,14 @@ const Hero = () => {
           Unleash the Prospects of Data Science
         </p>
 
+        
         {/* Subtitle */}
-      <p className="text-4xl md:text-5xl font-extrabold tracking-wide text-violet-500 mb-8 animate-slide-up">
-        Privacy-Preserving Fusion
-      </p>
+       <p className="text-4xl md:text-5xl font-extrabold tracking-wider 
+        text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-600 
+        mb-8 animate-slide-up">
+          Privacy-Preserving Fusion
+        </p>
+
 
 
 
