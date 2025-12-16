@@ -19,11 +19,11 @@ const Speakers = () => {
       img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
     },
     {
-      name: '',
-      designation: 'STAY TUNED', 
-      company: '',
-      linkedin: '',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
+      name: 'Mohammed Hidayath Ali ',
+      designation: 'Vice President', 
+      company: 'Appizion Consulting & Solutions Hyderabad',
+      linkedin: 'https://www.linkedin.com/in/mohammed-hidayath-ali-008286256/',
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765869118/speaker_3_xylrkf.jpg'
     },
     {
       name: '',
