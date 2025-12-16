@@ -5,11 +5,11 @@ const Speakers = () => {
 
   const speakers = [
     {
-      name: '',
-      designation: 'STAY TUNED', 
-      company: '',
-      linkedin: '',
-      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1764871578/Guest-Speaker_ev5rcn.png'
+      name: 'Bernard Bhutia',
+      designation: 'Vocal Image Mentor | Leadership Trainer | Career Coach', 
+      company: 'Head Center of Talent Development & Study Abroad Cell | Author | Learning & Development | National Award Winner',
+      linkedin: 'https://www.linkedin.com/in/bernardbhutia/?originalSubdomain=in',
+      img: 'https://res.cloudinary.com/dika0ttaj/image/upload/v1765867259/speaker_1_pnuhus.png'
     },
     {
       name: '',
