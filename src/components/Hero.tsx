@@ -37,7 +37,7 @@ const Hero = () => {
         {/* Main Title */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-            DATA FUSION'25
+            DATA FUSION ' 25
           </span>
         </h1>
 
